@@ -1,0 +1,24 @@
+body {
+  width: 100vh;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 1600px;
+}
+#albums {
+  width: 600px;
+}
+
+#fotos {
+  width: 800px;
+}
+.album-item {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.album-item:hover {
+  border: 1px solid lightyellow;
+}

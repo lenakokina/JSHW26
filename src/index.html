@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css"/>
+    <link rel="stylesheet" href="./css/normalize.css"/>
+    <!-- <link rel="stylesheet" href="./css/sceleton.css"/> -->
+    <link rel="stylesheet" href="./css/dark.css"/>    
+    <!-- <script src="./js/script.js" defer></script> -->
+    <script src="./js/config.js" defer></script>
+    <script src="./js/model/GalleryCollection.js" defer></script>    
+    <script src="./js/view/ListView.js" defer></script>
+    <script src="./js/controller/GalleryController.js" defer></script>    
+</head>
+<body>
+    <div class="container">
+    <div id="albums"></div>
+    <div id="fotos"></div>
+</div>
+ 
+<script id="fotoTemplate" type="text/template">
+    <img class="foto-item" src="{{url}}" alt="{{title}}"/>
+</script>
+<script type="text/template" id="albumTemplate">
+    <div class="album-item" data-id="{{id}}">{{title}}</div>
+</script>
+</body>
+</html>
+
+
+
+
