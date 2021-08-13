@@ -8,7 +8,8 @@ import { albumArr } from '../model/collection';
  const albumEl = document.querySelector('#albums');
  const fotoEl = document.querySelector('#fotos');
  const albumTemplate = document.querySelector('#albumTemplate').innerHTML;
- const fotoTemplate = document.querySelector('#fotoTemplate').innerHTML;   
+const fotoTemplate = document.querySelector('#fotoTemplate').innerHTML;
+import {fetchFoto } from '../model/collection';
 
  albumEl.addEventListener('click', onAlbumsClick);
 
@@ -18,13 +19,12 @@ import { albumArr } from '../model/collection';
    }
    
 }
-export function renderFotos(data) {
-  fotoEl.innerHTML = data.map((foto) => getFotoHTML(foto))
-    .join('\n');
+export function renderFotos(data) {  
+  fotoEl.innerHTML = data.map((foto) => getFotoHTML(foto)).join('');   
 }  
   
  
-function getFotoHTML(foto) {
+ function getFotoHTML(foto) {
     return fotoTemplate
       .replace('{{url}}', foto.thumbnailUrl)
       .replace('{{title}}', foto.title);
@@ -35,7 +35,8 @@ export function getFotosUrl(albumId) {
 }
 
 export function renderAlbums(data) {
-    albumEl.innerHTML = data.map(album => getAlbumHTML(album)).join('\n');
+  albumEl.innerHTML = data.map(album => getAlbumHTML(album)).join('\n');
+ 
 }
 
  function getAlbumHTML(album) {
@@ -46,7 +47,7 @@ export function renderAlbums(data) {
 
 export function getFirstAlbumPhotos(data) {
     if (albumArr.length) {
-      fetchFoto(data[0].id);
+      fetchFoto(data[0].id);      
     }
 }
 
