@@ -1,7 +1,7 @@
-import { ALBUM_URL } from './config.js';
-import { getFotosUrl } from './view/view.js';
-// import { renderAlbums } from './view/view.js';
-// import { renderFotos } from './view/view.js';
+import { ALBUM_URL } from '../config';
+import { getFotosUrl } from '../view/view';
+import { renderAlbums } from '../view/view';
+import { renderFotos } from '../view/view';
 
 export let fotoArr = [];
 export let albumArr = [];
@@ -12,6 +12,7 @@ export function fetchAlbum() {
         .then(resp => resp.json())
         .then((data) => albumArr = data)
         .then(renderAlbums);
+         
 }
 
 export function fetchFoto(albumId) {

@@ -1,5 +1,5 @@
 
-import {controller} from './controller/controller.js';
+import {controller} from '../js/controller/controller';
  controller();
 
 

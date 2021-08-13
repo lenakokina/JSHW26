@@ -1,6 +1,7 @@
 
-import { fotoArr, albumArr, fetchAlbum, fetchFoto } from './model/collection.js';
-import { renderFotos, renderAlbums, getFirstAlbumPhotos } from './view/view.js';
+import { data } from 'browserslist';
+import { fotoArr, albumArr, fetchAlbum, fetchFoto } from '../model/collection';
+import { renderFotos, renderAlbums, getFirstAlbumPhotos } from '../view/view';
 
 
 
@@ -12,7 +13,7 @@ export function controller() {
     fetchFoto(1);
     renderFotos(fotoArr);
 
-    getFirstAlbumPhotos(fotoArr[0]);
+    getFirstAlbumPhotos();
            
 }
 

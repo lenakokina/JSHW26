@@ -1,4 +1,8 @@
-import { PHOTOS_URL } from './config';
+import '../../css/styles.css';
+import '../../css/normalize.css';
+import '../../css/dark.css';
+import { PHOTOS_URL } from '../config';
+import { albumArr } from '../model/collection';
  const ALBUM_ITEM_CLASS = 'album-item';
 
  const albumEl = document.querySelector('#albums');
@@ -41,7 +45,7 @@ export function renderAlbums(data) {
 }
 
 export function getFirstAlbumPhotos(data) {
-    if (albumArr.length) {
+    if (data.length) {
       fetchFoto(data[0].id);
     }
 }
