@@ -1,4 +1,5 @@
 
+// import { data } from 'browserslist';
 import { data } from 'browserslist';
 import { fotoArr, albumArr, fetchAlbum, fetchFoto } from '../model/collection';
 import { renderFotos, renderAlbums, getFirstAlbumPhotos } from '../view/view';
@@ -13,7 +14,7 @@ export function controller() {
     fetchFoto(1);
     renderFotos(fotoArr);
 
-    getFirstAlbumPhotos();
+    getFirstAlbumPhotos(fotoArr[0]);
            
 }
 

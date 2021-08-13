@@ -45,7 +45,7 @@ export function renderAlbums(data) {
 }
 
 export function getFirstAlbumPhotos(data) {
-    if (data.length) {
+    if (albumArr.length) {
       fetchFoto(data[0].id);
     }
 }
